@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+
+    <style>
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-gap: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-weight: bold;
+
+    grid-template-areas: 
+        'header'
+        'grid-boxes'
+        'boxes'
+        'rodape';
+    grid-template-columns: 1fr;
+}
+
+header {
+    grid-area: header;
+    border: solid aquamarine 5px;
+    min-height: 4vw;
+    display: flex;
+    align-items: center;
+}
+
+header > .logo{
+    width: 20%;
+}
+
+header > .cabecalho{
+    width: 80%;
+}
+
+#grid-boxes {
+    grid-area: grid-boxes;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#grid-boxes > div {
+    border: solid aquamarine 5px;
+    min-height: 10vw;
+    margin: 15px;
+}
+
+#boxes {
+    grid-area: boxes;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#boxes > div {
+    background-color: aquamarine;
+    min-height: 20vw;
+}
+
+footer {
+    grid-area: rodape;
+    border: solid aquamarine 5px;
+    min-height: 7vw;
+}
+
+
+@media (max-width: 640px) {
+    body {
+        grid-template-areas:
+            'header'
+            'grid-boxes'
+            'boxes'
+            'rodape';
+        grid-template-columns: 1fr;
+    }
+
+    #grid-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+
+    #boxes {
+        display: grid;
+        grid-template-areas:
+            'box1'
+            'box2'
+            'box3';
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    a {
+        display: inline-block;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <p class="logo">
+            <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo">
+        </p>
+        <p class="cabecalho">Navigation</p>
+    </header>
+
+    <section id="grid-boxes">
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>
+        <div><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo"></div>        
+    </section>
+
+    <section id="boxes">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </section>
+
+    <footer>
+        Desenvolvido por Anna Jullya
+    </footer>
+</body>
+</html>

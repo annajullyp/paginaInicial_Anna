@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <style>
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-gap: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+header{
+    grid-area: header;
+    min-height: 10vw;
+    border: solid aquamarine 5px;
+}
+
+#banner{
+    grid-area: banner;
+    background-color: aquamarine;
+    min-height: 20vw;
+}
+
+#sidebar{
+    grid-area: sidebar;
+    min-height: 50vw;
+    min-width: 20vw;
+    border: solid aquamarine 5px;
+}
+
+main{
+    grid-area: princ;
+    background-color: aquamarine;
+    min-height: 50vw;
+}
+
+footer{
+    grid-area: rodape;
+    border: solid aquamarine 5px;
+    min-height: 7vw;
+}
+
+body{
+    grid-template-areas: 
+       'header header header header header header'
+       'sidebar banner banner banner banner banner'
+       'sidebar  princ  princ  princ  princ  princ'
+       'rodape rodape rodape rodape rodape rodape';
+}
+
+@media (max-width: 640px) {
+    body {
+        grid-template-areas:
+            'header'
+            'banner'
+            'sidebar'
+            'princ'
+            'rodape';
+        grid-template-columns: 1fr;
+    }
+
+    a {
+        display: inline-block;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <p>
+          <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?t=st=1744739482~exp=1744743082~hmac=0d78e13799e4927603cb773e11d63c7326ae42839abb65f53bd51312abb5886c&w=900" width="90px" alt="Logo">
+        </p>
+    </header>
+
+    <section id="banner">
+        Header/Banner
+    </section>
+
+    <section id="sidebar">
+        Sidebar <br>
+        Navigation
+    </section>
+
+    <main>
+        Body area
+    </main>
+
+    <footer>
+        Desenvolvido por Anna Jullya
+    </footer>
+</body>
+</html>

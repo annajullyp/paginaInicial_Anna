@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-gap: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-weight: bold;
+
+    grid-template-areas: 
+        'header header header header header header'
+        'nav    nav    nav    nav    nav    nav'
+        'banner banner banner banner banner banner'
+        'boxes  boxes  boxes  boxes  boxes  boxes'
+        'rodape rodape rodape rodape rodape rodape';
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+}
+
+header > p {
+    width: 20%;
+}
+
+header > h1{
+    width: 80%;
+}
+
+header {
+    grid-area: header;
+    border: solid greenyellow 5px;
+    min-height: 4vw;
+}
+
+nav {
+    grid-area: nav;
+    background-color: greenyellow;
+    min-height: 15vw;
+}
+
+#banner {
+    grid-area: banner;
+    background-color: greenyellow;
+    min-height: 10vw;
+}
+
+#boxes {
+    display: grid;
+    grid-area: boxes;
+    grid-template-areas: "box1 box2 box3";
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#boxes > div {
+    border: solid greenyellow 5px;
+    min-height: 40vw;
+    margin: 20px;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    grid-area: box3;
+}
+
+footer {
+    grid-area: rodape;
+    background-color: greenyellow;
+    min-height: 7vw;
+}
+
+@media (max-width: 640px) {
+    body {
+        grid-template-areas:
+            'header'
+            'nav'
+            'banner'
+            'boxes'
+            'rodape';
+        grid-template-columns: 1fr;
+    }
+
+    #boxes {
+        display: grid;
+        grid-template-areas:
+            'box1'
+            'box2'
+            'box3';
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    a {
+        display: inline-block;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <p>
+            <img src="https://img.freepik.com/free-vector/smartphone-concept-illustration_114360-265.jpg?t=st=1744740703~exp=1744744303~hmac=5b4cdff7ab4bf6599170122fc84d5ff27f45d324e77c382deab0df8dfc63da04&w=900"  width="90px" alt="Logo">
+        </p>
+        Navigation
+    </header>
+
+    <nav>
+        Header/Banner
+    </nav>
+
+    <section id="banner">
+        Intro Textarea
+    </section>
+
+    <section id="boxes">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </section>
+
+    <footer>
+        Desenvolvido por Anna Jullya
+    </footer>
+</body>
+</html>
